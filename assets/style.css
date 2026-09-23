@@ -15,6 +15,10 @@
   --seal: #9B3B34;
   --line: #DDCFAB;
   --shadow: 30 25% 15%;
+  --wisteria: #7C6A9C;
+  --soil: #6B4226;
+  --amber: #B8791F;
+  --frost: #78826F;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +34,10 @@
     --clay: #CB8A5D;
     --seal: #D97A6E;
     --line: #362F23;
+    --wisteria: #B3A0D6;
+    --soil: #C9995F;
+    --amber: #E3A84D;
+    --frost: #A9B39F;
   }
 }
 
@@ -358,11 +366,85 @@ article.post .callout {
 /* ---------- Footer ---------- */
 footer.site {
   border-top: 1px solid var(--line);
-  padding-block: 26px;
+  padding-block: 0 20px;
   font-size: 0.82rem;
   color: var(--ink-soft);
 }
-footer.site .foot-row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+footer.site .foot-row { display: flex; justify-content: flex-start; gap: 12px; flex-wrap: wrap; }
+footer.site .footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-block: 28px 20px;
+}
+footer.site .footer-brand .brand { margin-bottom: 8px; }
+footer.site .footer-tag { margin: 0; max-width: 40ch; font-size: 0.85rem; color: var(--ink-soft); }
+footer.site .footer-links { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+footer.site .footer-links a { font-size: 0.85rem; color: var(--ink-soft); text-decoration: none; }
+footer.site .footer-links a:hover { color: var(--moss); }
+footer.site .foot-row { border-top: 1px solid var(--line); padding-block: 16px 4px; }
+
+/* ---------- Author bio (sidebar on articles, banner on listing pages) ---------- */
+.post-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .post-layout { grid-template-columns: minmax(0, 1fr) 260px; }
+}
+.aside-bio {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+}
+@media (min-width: 900px) {
+  .aside-bio { position: sticky; top: 90px; }
+}
+.aside-bio .avatar,
+.bio-banner .avatar {
+  flex: none;
+  border-radius: 50%;
+  background: var(--moss-bright);
+  color: var(--moss-bright-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Literata", serif;
+  font-weight: 700;
+}
+.aside-bio .avatar { width: 52px; height: 52px; font-size: 1.1rem; margin-bottom: 12px; }
+.aside-bio h4 { font-size: 1.02rem; margin-bottom: 4px; }
+.aside-bio .role { font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 10px; }
+.aside-bio p:not(.role) { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+
+.bio-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 26px;
+}
+.bio-banner .avatar { width: 56px; height: 56px; font-size: 1.2rem; }
+.bio-banner h4 { font-size: 1rem; margin-bottom: 2px; }
+.bio-banner .role { font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 6px; }
+.bio-banner p:not(.role) { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+@media (max-width: 560px) {
+  .bio-banner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- Legal pages ---------- */
+.legal-body h2 { font-size: 1.2rem; margin-top: 1.8em; margin-bottom: 0.5em; }
+.legal-body p, .legal-body li { font-size: 0.96rem; color: var(--ink-soft); }
+.legal-body ul { padding-left: 1.3em; }
+.legal-body li { margin-bottom: 0.5em; }
 
 /* ---------- Floating Zalo ---------- */
 .float-zalo {
@@ -390,4 +472,99 @@ footer.site .foot-row { display: flex; justify-content: space-between; gap: 12px
 
 @media (max-width: 780px) {
   .hero-inner, .contact-band { grid-template-columns: 1fr; }
+}
+
+/* ---------- Seasonal care calendar (Gantt-style) ---------- */
+.care-calendar {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin: 32px 0;
+}
+.care-calendar h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+.care-calendar .cc-note {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+.cc-scroll { overflow-x: auto; }
+.cc-grid { min-width: 620px; }
+.cc-rowhead, .cc-row {
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid var(--line);
+}
+.cc-rowhead { border-top: none; padding-bottom: 6px; }
+.cc-label {
+  flex: 0 0 140px;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  padding: 8px 10px 8px 0;
+  display: flex;
+  align-items: center;
+}
+.cc-months, .cc-track {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(28px, 1fr));
+}
+.cc-months span {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  padding-bottom: 6px;
+}
+.cc-track {
+  position: relative;
+  min-height: 36px;
+  align-items: center;
+}
+.cc-bar {
+  grid-row: 1;
+  height: 20px;
+  border-radius: 6px;
+  align-self: center;
+}
+.cc-prune { background: var(--clay); }
+.cc-wire { background: var(--wisteria); }
+.cc-repot { background: var(--soil); }
+.cc-fert { background: var(--moss-bright); }
+.cc-flower { background: var(--seal); }
+.cc-fruit { background: var(--amber); }
+.cc-protect { background: var(--frost); }
+
+.cc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 16px;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+}
+.cc-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.cc-legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.cc-legend i.cc-prune { background: var(--clay); }
+.cc-legend i.cc-wire { background: var(--wisteria); }
+.cc-legend i.cc-repot { background: var(--soil); }
+.cc-legend i.cc-fert { background: var(--moss-bright); }
+.cc-legend i.cc-flower { background: var(--seal); }
+.cc-legend i.cc-fruit { background: var(--amber); }
+.cc-legend i.cc-protect { background: var(--frost); }
+
+@media (max-width: 560px) {
+  .cc-label { flex-basis: 92px; font-size: 0.72rem; }
+  .care-calendar { padding: 18px 16px; }
 }
