@@ -393,6 +393,11 @@ article.post .callout {
 .contact-methods .row { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
 .contact-methods .row svg { width: 20px; height: 20px; flex: none; color: #C8D2B8; }
 .contact-methods .row a { text-decoration: none; font-weight: 700; color: #F6F1E5; }
+.donate-qr { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+.donate-qr img { width: 72px; height: 72px; border-radius: 10px; background: #fff; padding: 4px; flex: none; }
+.donate-qr span { font-size: 0.85rem; color: #D9DFC9; line-height: 1.4; max-width: 32ch; }
+.contact-methods .btn-facebook { background: #1877F2; color: #fff; }
+.contact-methods .btn-facebook:hover { filter: brightness(1.08); }
 
 /* ---------- Footer ---------- */
 footer.site {
