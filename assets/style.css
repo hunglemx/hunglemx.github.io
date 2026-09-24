@@ -448,6 +448,14 @@ footer.site .foot-row { border-top: 1px solid var(--line); padding-block: 16px 4
   font-family: "Literata", serif;
   font-weight: 700;
 }
+.aside-bio .avatar img,
+.bio-banner .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
 .aside-bio .avatar { width: 52px; height: 52px; font-size: 1.1rem; margin-bottom: 12px; }
 .aside-bio h4 { font-size: 1.02rem; margin-bottom: 4px; }
 .aside-bio .role { font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 10px; }
