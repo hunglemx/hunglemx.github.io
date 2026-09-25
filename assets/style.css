@@ -416,7 +416,7 @@ article.post .callout {
 }
 .contact-teaser {
   background: #1E2A18;
-  color: var(--paper);
+  color: #F6F1E5;
   padding: 20px clamp(20px, 4vw, 36px);
   display: flex;
   align-items: center;
@@ -427,7 +427,7 @@ article.post .callout {
 .contact-teaser p { margin: 0; font-weight: 700; font-size: 1.02rem; max-width: 52ch; }
 .teaser-cta {
   flex: none;
-  background: var(--paper);
+  background: #F6F1E5;
   color: #1E2A18;
   font-weight: 800;
   font-size: 0.9rem;
@@ -479,7 +479,7 @@ article.post .callout {
   margin-bottom: 10px;
 }
 .contact-hero-info h2 {
-  color: var(--paper);
+  color: #F6F1E5;
   margin: 0 0 14px;
   font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
@@ -488,7 +488,7 @@ article.post .callout {
   font-family: "Literata", serif;
   font-size: clamp(1.7rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: var(--paper);
+  color: #F6F1E5;
   text-decoration: none;
   margin-bottom: 20px;
   font-variant-numeric: tabular-nums;
@@ -500,7 +500,7 @@ article.post .callout {
   background: transparent;
   border: 2px solid rgba(246, 241, 229, 0.85);
   box-shadow: none;
-  color: var(--paper);
+  color: #F6F1E5;
 }
 .social-icons--outline .social-icon:hover { background: rgba(246, 241, 229, 0.14); }
 @media (max-width: 780px) { .social-icons--outline { justify-content: center; } }
