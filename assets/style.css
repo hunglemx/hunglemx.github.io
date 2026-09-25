@@ -405,7 +405,7 @@ article.post .callout {
 .icon-facebook { background: #1877F2; }
 .qr-card { background: #fff; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; box-shadow: 0 14px 30px rgba(0,0,0,0.24); justify-self: center; }
 .qr-card-badge { display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--moss); background: color-mix(in srgb, var(--moss-bright) 18%, #fff); padding: 5px 14px; border-radius: 999px; }
-.qr-card img { width: 128px; height: auto; border-radius: 12px; }
+.qr-card img { width: 150px; height: auto; border-radius: 12px; }
 
 
 /* ---------- Contact — teaser + divider + hero (redesign) ---------- */
@@ -505,7 +505,7 @@ article.post .callout {
 .social-icons--outline .social-icon:hover { background: rgba(246, 241, 229, 0.14); }
 @media (max-width: 780px) { .social-icons--outline { justify-content: center; } }
 
-.qr-card-caption { font-size: 0.8rem; color: var(--ink-soft); max-width: 22ch; }
+.qr-card-caption { font-size: 0.76rem; color: var(--ink-soft); white-space: nowrap; }
 
 /* ---------- Footer ---------- */
 footer.site {
