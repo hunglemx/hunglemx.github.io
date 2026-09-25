@@ -406,6 +406,105 @@ article.post .callout {
 .qr-card { background: #fff; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; box-shadow: 0 14px 30px rgba(0,0,0,0.24); justify-self: center; }
 .qr-card-badge { display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--moss); background: color-mix(in srgb, var(--moss-bright) 18%, #fff); padding: 5px 14px; border-radius: 999px; }
 .qr-card img { width: 128px; height: auto; border-radius: 12px; }
+
+
+/* ---------- Contact — teaser + divider + hero (redesign) ---------- */
+.contact-stack {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(38, 32, 25, 0.22);
+}
+.contact-teaser {
+  background: #1E2A18;
+  color: var(--paper);
+  padding: 20px clamp(20px, 4vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.contact-teaser p { margin: 0; font-weight: 700; font-size: 1.02rem; max-width: 52ch; }
+.teaser-cta {
+  flex: none;
+  background: var(--paper);
+  color: #1E2A18;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.teaser-cta:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.contact-divider {
+  background: var(--paper);
+  color: var(--moss);
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact-divider::before, .contact-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.contact-divider span { white-space: nowrap; }
+.contact-hero {
+  position: relative;
+  background-image: linear-gradient(180deg, rgba(30, 42, 24, 0.9), rgba(43, 58, 36, 0.94)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Black_Hills_Spruce_bonsai_forest_planting%2C_July_13%2C_2008.jpg/1600px-Black_Hills_Spruce_bonsai_forest_planting%2C_July_13%2C_2008.jpg');
+  background-size: cover;
+  background-position: center 28%;
+  padding: clamp(32px, 6vw, 56px) clamp(20px, 5vw, 48px);
+}
+.contact-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 32px;
+  align-items: center;
+}
+@media (max-width: 780px) {
+  .contact-hero-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+}
+.contact-hero-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #CFE0B8;
+  margin-bottom: 10px;
+}
+.contact-hero-info h2 {
+  color: var(--paper);
+  margin: 0 0 14px;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+.contact-hero-phone {
+  display: block;
+  font-family: "Literata", serif;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--paper);
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-variant-numeric: tabular-nums;
+}
+.contact-hero-phone:hover { color: #fff; }
+.social-icons--outline .social-icon,
+.social-icons--outline .icon-zalo,
+.social-icons--outline .icon-facebook {
+  background: transparent;
+  border: 2px solid rgba(246, 241, 229, 0.85);
+  box-shadow: none;
+  color: var(--paper);
+}
+.social-icons--outline .social-icon:hover { background: rgba(246, 241, 229, 0.14); }
+@media (max-width: 780px) { .social-icons--outline { justify-content: center; } }
+
 .qr-card-caption { font-size: 0.8rem; color: var(--ink-soft); max-width: 22ch; }
 
 /* ---------- Footer ---------- */
