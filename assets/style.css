@@ -507,6 +507,34 @@ article.post .callout {
 
 .qr-card-caption { font-size: 0.76rem; color: var(--ink-soft); white-space: nowrap; }
 
+.qr-card-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.qr-card-divider::before, .qr-card-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.bmc-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFDD00;
+  color: #17140F;
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.bmc-button svg { width: 18px; height: 18px; flex: none; }
+.bmc-button:hover { transform: translateY(-2px); filter: brightness(1.05); }
+
 /* ---------- Footer ---------- */
 footer.site {
   border-top: 1px solid var(--line);
