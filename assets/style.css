@@ -259,11 +259,13 @@ section { padding-block: clamp(36px, 6vw, 60px); }
   gap: 12px;
 }
 .card-product .swatch {
-  height: 90px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   background: var(--surface-2);
 }
 .card-product .swatch svg { width: 42px; height: 42px; }
@@ -296,6 +298,8 @@ section { padding-block: clamp(36px, 6vw, 60px); }
   font-variant-numeric: tabular-nums;
 }
 .card-product .price small { font-size: 0.68rem; font-weight: 600; color: var(--ink-soft); }
+.card-product .price-old { text-decoration: line-through; color: var(--ink-soft); font-size: 0.82rem; font-weight: 600; margin-right: 8px; }
+.card-product .price-sale { color: #E4392E; font-weight: 800; font-size: 1.15rem; font-family: "Literata", serif; font-variant-numeric: tabular-nums; }
 .card-product .mini-cta { font-size: 0.8rem; font-weight: 700; color: var(--moss); text-decoration: none; }
 
 /* ---------- Tool / affiliate list ---------- */
@@ -393,11 +397,16 @@ article.post .callout {
 .contact-methods .row { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
 .contact-methods .row svg { width: 20px; height: 20px; flex: none; color: #C8D2B8; }
 .contact-methods .row a { text-decoration: none; font-weight: 700; color: #F6F1E5; }
-.donate-qr { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
-.donate-qr img { width: 72px; height: 72px; border-radius: 10px; background: #fff; padding: 4px; flex: none; }
-.donate-qr span { font-size: 0.85rem; color: #D9DFC9; line-height: 1.4; max-width: 32ch; }
-.contact-methods .btn-facebook { background: #1877F2; color: #fff; }
-.contact-methods .btn-facebook:hover { filter: brightness(1.08); }
+.social-icons { display: flex; gap: 14px; margin: 6px 0 20px; }
+.social-icon { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; box-shadow: 0 6px 16px rgba(0,0,0,0.22); transition: transform .15s ease, filter .15s ease; }
+.social-icon svg { width: 26px; height: 26px; }
+.social-icon:hover { transform: translateY(-3px); filter: brightness(1.08); }
+.icon-zalo { background: #0068FF; }
+.icon-facebook { background: #1877F2; }
+.qr-card { background: #fff; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; box-shadow: 0 14px 30px rgba(0,0,0,0.24); justify-self: center; }
+.qr-card-badge { display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--moss); background: color-mix(in srgb, var(--moss-bright) 18%, #fff); padding: 5px 14px; border-radius: 999px; }
+.qr-card img { width: 128px; height: auto; border-radius: 12px; }
+.qr-card-caption { font-size: 0.8rem; color: var(--ink-soft); max-width: 22ch; }
 
 /* ---------- Footer ---------- */
 footer.site {
